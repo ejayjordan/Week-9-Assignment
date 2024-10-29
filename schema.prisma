@@ -1,20 +1,16 @@
-generator client {
-provider = "prisma-client-js"
-}
 datasource db {
-provider = "postgresql"
-url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
 }
-model Artifact {
-id String @id @default(cuid())
-name String
-rarity Int
-museum Museum? @relation(fields: [museumId], references: [id])
-museumId String?
+
+generator client {
+  provider = "prisma-client-js"
 }
-model Museum {
-id String @id @default(cuid())
-name String?
-artifacts Artifact[]
+
+model Video {
+  id        Int      @id @default(autoincrement())
+  name      String
+  url       String
+  votes     Int
+  length    Int
 }
