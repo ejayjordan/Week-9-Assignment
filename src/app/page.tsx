@@ -1,4 +1,5 @@
 //import { useState } from "react";
+import Image from 'next/image'
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
@@ -9,7 +10,7 @@ const videoDisplay = videos.map((video, index) => <li key  = {index}>{video.name
 return (
 <main>
 {videoDisplay}
-<text>test again</text>
+<Image src="/meme.png" alt={'hahafunny'}/>
 </main>
 );
 }
