@@ -9,7 +9,7 @@ const videoDisplay = videos.map((video, index) => <li key  = {index}>{video.name
 return (
 <main>
 {videoDisplay}
-<text>test</text>
+<text>test again</text>
 </main>
 );
 }
