@@ -1,7 +1,14 @@
-import Image from "next/image";
+import { useState } from "react";
+import { PrismaClient } from "@prisma/client"
 
-export default function Home() {
-  return (
-    <></>
-  );
+const prisma = new PrismaClient()
+
+export default async function Home() {
+const videos = await prisma.video.findMany();
+const videoDisplay = videos.map((Video) => <li>{Video.name}</li>)
+return (
+<main>
+{videoDisplay}
+</main>
+);
 }
