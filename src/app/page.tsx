@@ -9,7 +9,10 @@ const videoDisplay = videos.map((video, index) => <li key  = {index}>{video.name
 return (
 <main>
 {videoDisplay}
-<Image src="/meme.png" alt={'hahafunny'}/>
+<Image src="/meme.png"
+width={1276}
+height={620}
+alt={'hahafunny'}/>
 </main>
 );
 }
