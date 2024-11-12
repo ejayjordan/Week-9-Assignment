@@ -1,4 +1,3 @@
-'use client';
 import { PrismaClient } from "@prisma/client";
 
 export async function Page(request : Request) {
