@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import UpdateForm from "./updateForm";
 
 
-async function updateVideo(formData:any) {
+async function updateVideo(formData: { get: (arg0: string) => any; }) {
     "use server";
 
     const prisma = new PrismaClient() 
@@ -22,7 +22,7 @@ async function updateVideo(formData:any) {
 }
 
 
-export default async function Page( { params } : { params : any } ) {
+export default async function Page( { params } : any) {
 
     const prisma = new PrismaClient()
     const video = await prisma.video.findUnique({

@@ -2,8 +2,7 @@ import { PrismaClient } from '@prisma/client'
 export default async function Page( ) {
     const prisma = new PrismaClient()
 
-    //Get ALL the videos
-    let videos = await prisma.video.findMany()
+    const videos = await prisma.video.findMany()
 
     const videoList = videos.map((video) => 
         <li>
