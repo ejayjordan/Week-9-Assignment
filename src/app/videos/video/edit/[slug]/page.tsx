@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { redirect } from 'next/navigation';
 import UpdateForm from "./updateForm";
+import { decodeAction } from "next/dist/server/app-render/entry-base";
 
 
 async function updateVideo(FormData: any) {
@@ -22,7 +23,7 @@ async function updateVideo(FormData: any) {
 }
 
 
-export default async function Page( params: { slug: any }) {
+async function Page( params: { slug: any }) {
 
     const prisma = new PrismaClient()
     const video = await prisma.video.findUnique({
@@ -34,3 +35,5 @@ export default async function Page( params: { slug: any }) {
         <UpdateForm updateUrl={updateVideo} video={video}  />
     </div>)
 }
+
+export default Page;
