@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client'
-import Link from 'next/link'
 export default async function Page( ) {
     const prisma = new PrismaClient()
 
