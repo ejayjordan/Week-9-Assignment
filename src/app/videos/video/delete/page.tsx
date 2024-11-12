@@ -8,6 +8,6 @@ export default async function Page(request : Request) {
     id: req.id,
     }
     })
-    return( Response.json(res) )
+    return( <div>Response.json(res) </div>)
     }
     
