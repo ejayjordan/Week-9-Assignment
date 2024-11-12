@@ -1,6 +1,7 @@
+'use client';
 import { PrismaClient } from "@prisma/client";
 
-export async function DELETE(request : Request) {
+export async function Page(request : Request) {
     const req = await request.json()
     const prisma = new PrismaClient()
     const res = await prisma.video.delete({
