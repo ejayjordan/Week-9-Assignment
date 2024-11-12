@@ -4,15 +4,15 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient()
 
 export default async function Home() {
-const videos = await prisma.video.findMany();
-const videoDisplay = videos.map((video, index) => <li key  = {index}>{video.name}</li>)
+    const videos = await prisma.video.findMany();
+    const videoDisplay = videos.map((video, index) => <li key  = {index}>{video.name}</li>)
 return (
-<main>
-{videoDisplay}
-<Image src="/meme.png"
-width={1276}
-height={620}
-alt={'hahafunny'}/>
-</main>
+    <main>
+    {videoDisplay}
+    <Image src="/meme.png"
+    width={1276}
+    height={620}
+    alt={'hahafunny'}/>
+    </main>
 );
 }
