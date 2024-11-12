@@ -29,10 +29,10 @@ async function Page( params: { slug: any }) {
         where: { id: Number(params.slug) }
     })
 
-    return[<div>
+    return<div>
         <h2>UPDATE VIDEO</h2>
         <UpdateForm updateUrl={updateVideo} video={video}  />
-    </div>]
+    </div>
 }
 
 export default Page;
