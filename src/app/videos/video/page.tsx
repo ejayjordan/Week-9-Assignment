@@ -4,11 +4,11 @@ export default async function Page( ) {
 
     const videos = await prisma.video.findMany()
 
-    const videoList = videos.map((video, index) => 
-        <li>
-            <a href={"/videos/video/"+video.id} key={index}>{video.name}</a>
-            <a href={"/videos/update/"+video.id} key={index}>[edit]</a>
-        </li> 
+    const videoList = videos.map((video) => 
+        <ul>
+            <li key={"/videos/video/"+video.id}>{video.name}</li>
+            <li key={"/videos/update/"+video.id}>[edit]</li>
+        </ul> 
     )
 
     return( <div>  
