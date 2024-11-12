@@ -22,17 +22,17 @@ async function updateVideo(FormData: any) {
 }
 
 
-async function Page( params: { slug: any }) {
+export default async function Page( params:any ) {
 
     const prisma = new PrismaClient()
     const video = await prisma.video.findUnique({
         where: { id: Number(params.slug) }
     })
 
-    return<div>
+    return(
+    <div>
         <h2>UPDATE VIDEO</h2>
         <UpdateForm updateUrl={updateVideo} video={video}  />
     </div>
+    )
 }
-
-export default Page;
