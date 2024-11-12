@@ -1,3 +1,4 @@
+'use server';
 import { PrismaClient } from "@prisma/client";
 
 export default async function Page(request : Request) {
@@ -8,6 +9,8 @@ export default async function Page(request : Request) {
     id: req.id,
     }
     })
-    return( <div>Response.json(res) </div>)
+    return(
+        Response.json(res)
+    )
     }
     
