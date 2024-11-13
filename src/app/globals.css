@@ -39,3 +39,9 @@ img{
   border-radius: 10px;
   border-color: #000000;
 }
+
+a {
+  padding: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:#000000;
+}

@@ -29,8 +29,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav>
-          <a href="">Home</a>
+          <a href="/">Home</a>
           <a href="/videos/video/page.tsx">Videos</a>
+          <a href="/videos/video/add/page.tsx">Add Videos</a>
+          <a href="/videos/video/edit/page.tsx">Update Videos</a>
         </nav>
         {children}
       </body>
