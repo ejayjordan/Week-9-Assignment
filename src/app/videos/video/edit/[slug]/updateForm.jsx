@@ -22,7 +22,7 @@ export default function UpdateForm( props ) {
                     type="text" name="runtime" 
                     value={videoLength} onChange={(e) => setVideoLength(e.target.value)} />
             </label>
-            <button type="submit">Update</button>
+            <button type="submit">Edit</button>
         </form>
     )
 }
