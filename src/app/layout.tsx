@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <nav>
           <a href="">Home</a>
-          <a href="/videos/video">Videos</a>
+          <a href="/videos/video/page.tsx">Videos</a>
         </nav>
         {children}
       </body>
