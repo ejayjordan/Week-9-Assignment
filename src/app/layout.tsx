@@ -33,6 +33,7 @@ export default function RootLayout({
           <Link href="/">Home</Link>
           <Link href="/videos/video">Videos</Link>
           <Link href="/videos/video/add">Add Videos</Link>
+          <Link href="/videos/video/delete">Delete Videos</Link>
           <Link href="/videos/video/edit/page.tsx">Update Videos</Link>
         </nav>
         {children}
