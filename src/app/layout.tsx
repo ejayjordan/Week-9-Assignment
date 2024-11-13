@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <nav>
           <a href="">Home</a>
-          <a href="/videos">Videos</a>
+          <a href="/videos/video">Videos</a>
         </nav>
         {children}
       </body>
