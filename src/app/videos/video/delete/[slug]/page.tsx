@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 
     
 
-export default async function Page( {params}: { params: { slug: number } }){
+export default async function Page( {params}: { params: { slug: number } } ){
     'use server';
     const prisma = new PrismaClient()
     await prisma.video.delete({

@@ -22,7 +22,7 @@ async function updateVideo(FormData: any) {
 }
 
 
-export default async function Page( {params}: { params: { slug: number } }) {
+export default async function Page( {params}: { params: { slug: number } } ) {
 
     const prisma = new PrismaClient()
     const video = await prisma.video.findUnique({
