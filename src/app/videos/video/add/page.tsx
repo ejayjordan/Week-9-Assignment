@@ -12,7 +12,7 @@ async function createVideo(formData : FormData) {
             length: Number(formData.get('runtime'))
         }
     })
-    redirect('/videos')
+    redirect('/videos/video')
 }
     
 
