@@ -31,9 +31,9 @@ export default function RootLayout({
       >
         <nav>
           <Link href="/">Home</Link>
-          <a href="/videos/video/page.tsx">Videos</a>
-          <a href="/videos/video/add/page.tsx">Add Videos</a>
-          <a href="/videos/video/edit/page.tsx">Update Videos</a>
+          <Link href="/videos/video">Videos</Link>
+          <Link href="/videos/video/add">Add Videos</Link>
+          <Link href="/videos/video/edit">Update Videos</Link>
         </nav>
         {children}
       </body>
