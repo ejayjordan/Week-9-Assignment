@@ -7,7 +7,8 @@ export default async function Page( ) {
     const videoList = videos.map((video, index) =>
         <li key={index}>
             <a href={"/videos/video/" + video.id}>{video.name}</a>
-            <a href={"/videos/update/" + video.id}>[edit]</a>
+            <a href={"/videos/edit/" + video.id}>[edit]</a>
+            <a href={"/videos/delete/" + video.id}>[delte]</a>
         </li> 
     )
 
